@@ -23,6 +23,31 @@
     <a href="spotify:playlist:69octtOKftISg93FJh8fFO?si=e4578a29fbbb4f28">
         <img src="3b46ee3d0a68b6dfcf5c6d4e46fec7cf.jpg" alt="Spotify Playlist">
     </a>
+    <img src="7210c1d43c0b24d97b86ec2b6f3a5521.jpg" alt="Insta dm" id="clickable-image">
+    <script>
+        // Define a dictionary of users and possible messages
+        const data = [
+            { username: "lourencorcc", message: "Hey there! How's it going?" },
+            { username: "lou142enco", message: "Hello! Just checking in!" },
+            // { username: "user3", message: "Hi! Thought you'd like this!" },
+        ];
+
+        // Function to pick a random user and message
+        function getRandomEntry() {
+            const randomIndex = Math.floor(Math.random() * data.length);
+            return data[randomIndex];
+        }
+
+        // Add click listener to the image
+        document.getElementById("clickable-image").addEventListener("click", function () {
+            const { username, message } = getRandomEntry();
+            // Generate a link for the Instagram app
+            const uri = `instagram://user?username=${username}`;
+            alert(`Prepare to message ${username}: "${message}"`);
+            // Redirect to Instagram app
+            window.location.href = uri;
+        });
+    </script>
     <p>BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___</p>
     <p>BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___</p>
     <p>BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___</p>
