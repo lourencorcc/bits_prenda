@@ -37,33 +37,17 @@
             const randomIndex = Math.floor(Math.random() * data.length);
             return data[randomIndex];
         }
+        
+
+        Add click listener to the image
         document.getElementById("clickable-image").addEventListener("click", function () {
             const { username, message } = getRandomEntry();
-            
-            // Instagram DM URL format (opens direct message screen)
-            const uri = `instagram://direct?text=${encodeURIComponent(message)}&user=${username}`;
-            
-            // Redirect to Instagram
-            alert(`Preparing to send: "${message}" to ${username}`);
-        
-            // Open Instagram directly, if on mobile
+            // Generate a link for the Instagram app
+            const uri = `instagram://user?username=${username}`;
+            alert(`Prepare to message ${username}: "${message}"`);
+            // Redirect to Instagram app
             window.location.href = uri;
-        
-            // For browsers where the URI might not be recognized, open in web version
-            setTimeout(function() {
-                window.open(`https://www.instagram.com/${username}/`, '_blank');
-            }, 2000); // Give it a moment to try to open the app
         });
-
-        // Add click listener to the image
-        // document.getElementById("clickable-image").addEventListener("click", function () {
-        //     const { username, message } = getRandomEntry();
-        //     // Generate a link for the Instagram app
-        //     const uri = `instagram://user?username=${username}`;
-        //     alert(`Prepare to message ${username}: "${message}"`);
-        //     // Redirect to Instagram app
-        //     window.location.href = uri;
-        // });
     </script>
     <p>BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___</p>
     <p>BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___BINHA___</p>
